@@ -1,0 +1,33 @@
+<!DOCTYPE html>  
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"  
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">  
+    <head>  
+        <title>Hello World!</title>
+        <script type="text/javascript" th:inline="text">
+        	alert('[[${ok}]]');
+        </script>
+    </head>  
+    <body>  
+        <h1 th:inline="text">Hello.v.2</h1>  
+        <p th:text="${ok}"></p>  sdfsdfsdf
+        ---${ok}
+        
+        <div th:include="/templates/footer :: copyright"></div>
+        
+        <textarea th:inline="text">
+        	[[${ok}]]
+        </textarea>
+        <div th:inline="text">
+        [[${ok}]]
+        </div>
+        
+        <table>
+        ==
+        <tr th:each="user:${list}">
+        	<td th:text="${user.name}">sd</td>
+        </tr>
+        </table>
+        
+        <p th:inline="text">Hello, [[${ok}]]!</p>
+    </body>  
+</html>
